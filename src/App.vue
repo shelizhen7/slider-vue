@@ -23,7 +23,7 @@ import axios from "axios";
 import vueHeader from "./components/header.vue";
 import chartContent from "./components/chartContent.vue";
 import Slider from "./components/Slider.vue";
-import tabs from "./components/Tabs.vue";
+import tabs from "./components/tabs.vue";
 import tabPane from "./components/tabPane.vue";
 
 export default {
