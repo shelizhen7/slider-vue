@@ -11,7 +11,7 @@
       <div class="tab-container">
         <ul class="tabs-box">
           <li class="tabs-item active">
-            <div class="tabs-link">Avaliable Items</div>
+            <div class="tabs-link" style="border-right: 1px solid #dbdbdb;">Avaliable Items</div>
           </li>
           <li class="tabs-item">
             <div class="tabs-link">Information One</div>
@@ -53,7 +53,7 @@ export default {
       const vm = this;
       axios.get("https://jsonplaceholder.typicode.com/photos").then((res) => {
         if (res.status == 200) {
-          vm.list = res.data.filter((e) => e.id <= 6).map((e) => e.url);
+          vm.list = res.data.filter((e) => e.id <= 6).map((e) => e.thumbnailUrl);
         }
         this.isLoading = false;
       });

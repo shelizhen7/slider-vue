@@ -9,17 +9,10 @@
         }"
       >
         <div
-          v-for="(item, index) in list"
+          v-for="(item, index) in list" :key=index
           class="img"
           :style="`background-image:url(${item})`"
         ></div>
-        <!-- <div v-for="(item,index) in list" class="img">
-            <img width="110" height="auto" :src="`${item}`" alt="">
-        </div> -->
-        <!-- <div class="img"></div>
-        <div class="img"></div>
-        <div class="img"></div>
-        <div class="img"></div> -->
       </div>
     </div>
 
