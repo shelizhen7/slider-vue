@@ -1,19 +1,18 @@
 <template>
-  <div style="height: 15rem; position: relative" ref="sliderRef">
-    <div>
+  <div class="slider" ref="sliderRef">
+    <div
+      class="image-content"
+      :style="{
+        transform: `translateX(${slideX}px)`,
+        transition: `transform 1s ease`,
+      }"
+    >
       <div
-        class="image-content"
-        :style="{
-          transform: `translateX(${slideX}px)`,
-          transition: `transform 1s ease`,
-        }"
-      >
-        <div
-          v-for="(item, index) in list" :key=index
-          class="img"
-          :style="`background-image:url(${item})`"
-        ></div>
-      </div>
+        v-for="(item, index) in list"
+        :key="index"
+        class="img"
+        :style="`background-image:url(${item})`"
+      ></div>
     </div>
 
     <div v-if="isDisplay" class="slider-btn slider-btn-left" @click="prev()">
@@ -61,14 +60,15 @@ export default {
 };
 </script>
 <style scoped>
-.image-content {
-  padding: 0.625rem;
-  height: 10rem;
+.slider {
+  height: 15rem;
+  position: relative;
   overflow: hidden;
-  /* display: flex; */
-  /* display:inline-block; */
+}
+.image-content {
+  padding: 1.8rem 0.625rem;
+  height: 10rem;
   float: left;
-  /* width:100%; */
   white-space: nowrap;
 }
 .img {
@@ -80,10 +80,13 @@ export default {
   display: inline-block;
   height: 100%;
   background-size: contain;
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 2px 3px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 3px 4px 0 rgb(0 0 0 / 10%);
 }
 .slider-btn {
   position: absolute;
-  top: 5rem;
+  top: 6rem;
   z-index: 999;
   width: 1.875rem;
   height: 1.875rem;
@@ -116,20 +119,20 @@ export default {
 }
 
 .triangle-left {
-  margin: 5px -3px;
+  margin: 7px 2px;
   float: left;
   width: 0;
   height: 0;
-  border-width: 10px;
+  border-width: 7px;
   border-style: solid;
   border-color: transparent #fff transparent transparent;
 }
 .triangle-right {
-  margin: 5px 12px;
+  margin: 8px 13px;
   float: left;
   width: 0;
   height: 0;
-  border-width: 10px;
+  border-width: 7px;
   border-style: solid;
   border-color: transparent transparent transparent #fff;
 }

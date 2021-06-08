@@ -12,11 +12,11 @@
 .btn{
     background-color:#F58024;
     border-radius: 3px;
-    width:25px;
-    height: 30px;
+    width:1.56rem;
+    height: 1.875rem;
     display: inline-block;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;

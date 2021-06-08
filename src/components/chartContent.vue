@@ -1,9 +1,9 @@
 <template>
   <div class="content">
     <div class="chart-detail">
-      <h5>Product Item Summary</h5>
+      <h4>Product Item Summary</h4>
       <div class="deposite"><span class="title">Deposited</span><span class="num">$2500.00</span></div>
-      <div class="withdrawn"><span class="title">withdrawn</span><span class="num">$2500.00</span></div>
+      <div class="withdrawn"><span class="title">Withdrawn</span><span class="num">$700.00</span></div>
     </div>
     <div class="pie">
       <div class="colorWheel">
@@ -34,13 +34,16 @@
   display: block;
 }
 .deposite .title{
-  color:#F58024
+  color:#F58024;
+  font-weight:600;
 }
 .withdrawn .title{
-  color:#E51C1C
+  color:#E51C1C;
+  font-weight:600;
 }
 .deposite .num,.withdrawn .num{
-  font-size:0.8rem
+  font-size:0.8rem;
+  margin-top:.4rem;
 }
 .colorWheel {
   position: relative;
@@ -51,7 +54,7 @@
   background-size: 50% 50%;
   border:1px solid #ccc;
   border-radius: 50%;
-  margin: 30px;
+  margin: 1.875rem auto;
 }
 .piece{
   position: absolute;

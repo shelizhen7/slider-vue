@@ -5,7 +5,7 @@
         <vue-header />
         <chart-content></chart-content>
       </div>
-      <p style="color: #dbdbdb; padding: 30px 40px">
+      <p class="detail">
         Lorem ipsum dummy text.Lorem isum not just dummy text
       </p>
       <tabs v-model="activeName">
@@ -23,7 +23,7 @@ import axios from "axios";
 import vueHeader from "./components/header.vue";
 import chartContent from "./components/chartContent.vue";
 import Slider from "./components/Slider.vue";
-import tabs from "./components/Tabs.vue";
+import tabs from "./components/tabs.vue";
 import tabPane from "./components/tabPane.vue";
 
 export default {
@@ -92,17 +92,19 @@ body {
 .loading {
   position: absolute;
   top: 46%;
-  left: 40%;
+  left: 45%;
   color: #dbdbdb;
 }
 .container {
   height: 15rem;
   background-color: #000;
-  padding: 30px 20px;
-  border-radius: 10px;
+  padding: 1.875rem 1.25rem;
+  border-radius: 5%;
 }
-p {
+#app p {
   margin: 0;
+  color: #dbdbdb; 
+  padding: 1.6rem 1.8rem;
 }
 </style>
 

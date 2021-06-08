@@ -48,7 +48,8 @@ export default {
   padding: 10px;
   text-align: center;
   border-bottom: 3px solid transparent;
-  transition: border 1s ease
+  transition: border 1s ease;
+  font-size:.7rem
 }
 .tabs-item.active {
   border-color: #f58024;
