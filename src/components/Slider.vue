@@ -1,6 +1,7 @@
 <template>
   <div class="slider" ref="sliderRef">
     <div
+      ref="imgeContent"
       class="image-content"
       :style="{
         transform: `translateX(${slideX}px)`,
@@ -42,6 +43,9 @@ export default {
   },
   methods: {
     next() {
+      if(this.$refs.imgeContent.offsetWidth <= this.$refs.sliderRef.offsetWidth){
+        return;
+      }
       this.cur++;
       if (this.cur == this.len - 1) {
         this.isDisplay = true;
@@ -119,7 +123,7 @@ export default {
 }
 
 .triangle-left {
-  margin: 7px 2px;
+  margin: 8px 2px;
   float: left;
   width: 0;
   height: 0;
